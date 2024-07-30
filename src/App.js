@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React, { useState } from "react";
+
+import Canvas from "./components/screens/canvas/Canvas";
+import Toolbar from "./components/screens/canvas/Toolbar";
+import AuthRoute from "./routing/AuthRoute";
+import AppRoute from "./routing/AppRoute";
+
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+            <AppRouter />
     </div>
   );
 }
 
+
+function AppRouter() {
+    // const log_status = useSelector((state) => state.user.value.is_logged_in);
+    const log_status = true;
+
+  return (
+    <>
+      {log_status ? <AppRoute /> : <AuthRoute />}
+    </>
+  );
+} 
 export default App;
