@@ -35,7 +35,7 @@ const Toolbar = () => {
   return (
     <Container>
       <Button onClick={() => handleToolChange("select")}>Select</Button>
-      <Button onClick={() => handleToolChange("pencil")}>pencil</Button>
+      {/* <Button onClick={() => handleToolChange("pencil")}>pencil</Button> */}
 
       <Button onClick={() => handleToolChange("rectangle")}>Rectangle</Button>
       <Button onClick={() => handleToolChange("line")}>Line</Button>
